@@ -166,7 +166,7 @@ footer p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80vh; /* Ensures the content is centered vertically */
+  min-height: 80vh;
   max-width: 900px;
   margin: 0 auto;
 }

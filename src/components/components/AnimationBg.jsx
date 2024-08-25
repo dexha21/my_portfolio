@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Animation.css'; // Import your CSS file for styles
+import './Animation.css'; 
 
 const AnimationComponent = () => {
     const containerRef = useRef(null);
@@ -13,7 +13,6 @@ const AnimationComponent = () => {
         const circles = [];
         const velocitiesArr = [];
 
-        // Create and append circles
         for (let i = 0; i < numCircles; i++) {
             const circle = document.createElement('div');
             circle.className = 'background-anim';
@@ -32,26 +31,22 @@ const AnimationComponent = () => {
                 const velocity = velocities[index];
                 const rect = circle.getBoundingClientRect();
 
-                // Update position based on velocity
+
                 const newX = rect.left + velocity.x;
                 const newY = rect.top + velocity.y;
 
-                // Bounce off edges
                 if (newX < 0 || newX > window.innerWidth - rect.width) velocity.x *= -1;
                 if (newY < 0 || newY > window.innerHeight - rect.height) velocity.y *= -1;
 
-                // Update circle position
                 circle.style.left = `${Math.min(Math.max(newX, 0), window.innerWidth - rect.width)}px`;
                 circle.style.top = `${Math.min(Math.max(newY, 0), window.innerHeight - rect.height)}px`;
 
-                // Update velocity
                 velocities[index] = velocity;
             });
 
             requestAnimationFrame(updateCircles);
         };
 
-        // Start random movement
         requestAnimationFrame(updateCircles);
 
         const handleMouseMove = (e) => {
@@ -68,11 +63,10 @@ const AnimationComponent = () => {
                 const dx = mousePos.current.x - circleCenterX;
                 const dy = mousePos.current.y - circleCenterY;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-                const minDistance = 50; // Minimum distance to maintain from the cursor
-                const maxDistance = 200; // Max distance at which circles start to move towards cursor
+                const minDistance = 50;
+                const maxDistance = 200;
                 const moveSpeed = Math.min(10, Math.max(0, (maxDistance - Math.max(distance, minDistance)) / maxDistance));
 
-                // Smoothly move circles towards cursor
                 if (distance > minDistance) {
                     circle.style.transform = `translate(${dx * moveSpeed}px, ${dy * moveSpeed}px)`;
                 }
@@ -81,7 +75,6 @@ const AnimationComponent = () => {
             requestAnimationFrame(moveTowardsCursor);
         };
 
-        // Start smooth cursor movement
         requestAnimationFrame(moveTowardsCursor);
 
         document.addEventListener('mousemove', handleMouseMove);

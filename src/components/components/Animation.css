@@ -7,15 +7,15 @@
     pointer-events: none;
     overflow: hidden;
     z-index: -1;
-    background-color: #1a1a1a; /* Background color */
+    background-color: #1a1a1a;
 }
 
 .background-anim {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: rgba(0, 150, 255, 0.5); /* Adjust color and opacity */
+    background: rgba(0, 150, 255, 0.5);
     border-radius: 50%;
     pointer-events: none;
-    transition: transform 5s ease-out; /* Smooth transition */
+    transition: transform 5s ease-out;
 }
