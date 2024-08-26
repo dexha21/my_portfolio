@@ -1,10 +1,14 @@
 import React from 'react';
+import Me from "./../assets/images/me.jpg"
 
 function Contact() {
   return (
     <section className="contact">
       <div className="contact-container">
         <h2>Contact Me</h2>
+        <div style={{ width: "200px", height: "200px", borderRadius: "50%", overflow: "hidden", margin: "12px auto" }}>
+          <img src={Me} style={{ width: "100%", height: "100%", objectFit: "cover" }} alt="" />
+        </div>
         <p>I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out through any of the methods below:</p>
         <div className="contact-info">
           <div className="contact-item">

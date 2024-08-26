@@ -15,6 +15,10 @@ function App() {
     <Router>
       <AnimationComponent />
       <Header />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,6 +27,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Footer />
     </Router>
   );

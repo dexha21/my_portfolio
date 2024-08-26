@@ -9,7 +9,7 @@ function Header() {
   };
 
   return (
-    <header>
+    <header style={{ position: "fixed", top: "0px", left: "0px", width: "100%", zIndex: "999" }}>
       <nav className="container">
         <div className="logo" style={{ margin: "auto 0px" }}>
           <h1>MY PORTFOLIO </h1>
