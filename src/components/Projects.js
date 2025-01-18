@@ -4,6 +4,23 @@ import SubProject from './components/SubProject';
 function Projects() {
   const projects = [
     {
+      name: "University of Benin Consultancy Result Checker",
+      status: "Finished",
+      body: `A webapp for checking University of Benin Consultancy Students Results for all section (Nursery, Primary and Secondary).
+      It includes two app; for checking the result and for the teachers to upload the result.
+      Built using React JS, PHP and MySQL`,
+      url: [
+        {
+          name: "Uniben Result Checker",
+          url: "https://result.unibenconsultancyschool.com/"
+        },
+        {
+          name: "Uniben Teachers",
+          url: "https://teacher.unibenconsultancyschool.com/"
+        }
+      ],
+    },
+    {
       name: "Success Royal Academy Teachears Application",
       status: "Finished",
       body: `A webapp for applying as a SRA Staffs either old or new applicant with admin platform.
